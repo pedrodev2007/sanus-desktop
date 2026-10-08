@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100dvh;
+}
+
+main {
+    height: 100%;
+}
+
+#container-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+div {
+    margin-bottom: 50px; 
+}
+
+#right-side-main {
+    height: 700px;
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #d8d8d8;
+    border-radius: 50px;
+}
+
+#vendas-top {
+    display: flex;
+}
+
+#vendas-add-remove-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#vendas-combobox-input {
+    display: flex;
+    justify-content: space-between;
+}
+
+#vendas-final-btn {
+    display: flex;
+    justify-content: right;
+}
+
+button {
+    margin: 10px;
+}

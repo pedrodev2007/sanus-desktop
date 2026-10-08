@@ -3,9 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/style/vendas.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
-<body>
-    
+<body style="background-color: white;">
+    <main>
+        <div id="container-main">
+            <div id="right-side-main">
+                <div id="left-side-vendas-container">
+                    <div id="vendas-top">
+                        <div>
+                            <table class="table table-bordered">
+                                <tr>
+                                    <th>CÓDIGO DE BARRAS (VALOR NUMÉRICO)</th>
+                                    <th>NOME PRODUTO</th>
+                                    <th>QUANTIDADE</th>
+                                    <th>LOTE</th>
+                                    <th>VALOR TOTAL POR PRODUTO</th>
+                                    <th>TOTAL</th>
+                                </tr>
+                                <tr>
+                                    <td>teste</td>
+                                    <td>teste</td>
+                                    <td>teste</td>
+                                    <td>teste</td>
+                                    <td>teste</td>
+                                    <td>teste</td>
+                                </tr>
+                                <tr>
+                                    <td>teste</td>
+                                    <td>teste</td>
+                                    <td>teste</td>
+                                    <td>teste</td>
+                                    <td>teste</td>
+                                    <td>teste</td>
+                                </tr>
+                            </table>
+                        </div>
+                        
+                    </div> <!-- TABELA E BOTÕES ADD E REMOVE -->
+                    <div id="vendas-combobox-input">
+                        <select name="" id="">
+                            <option value="">FORMA DE PAGAMENTO</option>
+                            <option value="">DINHEIRO EM ESPÉCIE</option>
+                            <option value="">CRÉDITO</option>
+                            <option value="">DÉBITO</option>
+                        </select>
+                        <input type="text" placeholder="CPF DO CLIENTE...">
+                    </div> <!-- FORMA DE PAGAMENTO E CPF -->
+                    <div>
+                        <input type="checkbox" name="checkbox_vendas">
+                        <label for="checkbox_vendas">Cliente cadastrado no sistema?</label>
+                    </div> <!-- CHECKBOX -->
+                    <div id="vendas-final-btn">
+                        <button>CANCELAR</button>
+                        <button>CONFIRMAR</button>
+                        
+                    </div> <!-- BOTÕES -->
+                </div>
+                <div id="right-side-vendas-container">
+                    <div id="vendas-add-remove-container">
+                        <button>ADICIONAR</button>
+                        <button>REMOVER</button>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </main>
 </body>
 </html>
