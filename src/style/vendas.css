@@ -28,6 +28,10 @@ div {
     border-radius: 50px;
 }
 
+#formaPagamento {
+	border-radius: 0px;
+}
+
 #vendas-top {
     display: flex;
 }
