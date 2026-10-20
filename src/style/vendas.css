@@ -16,7 +16,7 @@ main {
 }
 
 div {
-    margin-bottom: 50px; 
+    margin-bottom: 25px; 
 }
 
 #right-side-main {
@@ -38,7 +38,8 @@ div {
 
 #vendas-add-remove-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    margin-bottom: 0px;
 }
 
 #vendas-combobox-input {
@@ -51,6 +52,21 @@ div {
     justify-content: right;
 }
 
+#vendas-final-btn input {
+    margin: 5px;
+}
+
 button {
     margin: 10px;
+}
+
+#tabela-container {
+    overflow-y: auto;
+    height: 300px;
+    margin: 0;
+}
+
+#tabela-container thead th {
+        position: sticky;
+        top: 0;
 }

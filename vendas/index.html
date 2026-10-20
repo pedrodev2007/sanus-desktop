@@ -15,61 +15,150 @@
                 <div id="left-side-vendas-container">
                     <div id="vendas-top">
                         <div>
-                            <table id="tabelaProdutosVenda" class="table table-bordered">
-                                <thead>
-                                    <th>CÓDIGO DE BARRAS (VALOR NUMÉRICO)</th>
-                                    <th>NOME PRODUTO</th>
-                                    <th>QUANTIDADE</th>
-                                    <th>LOTE</th>
-                                    <th>VALOR TOTAL POR PRODUTO</th>
-                                    <th>TOTAL</th>
-                                </thead>
-                                <tbody>
-									<tr>
-										<td>teste</td>
-										<td>teste</td>
-										<td>teste</td>
-										<td>teste</td>
-										<td>teste</td>
-										<td>teste</td>
-									</tr>
-									<tr>
-										<td>teste</td>
-										<td>teste</td>
-										<td>teste</td>
-										<td>teste</td>
-										<td>teste</td>
-										<td>teste</td>
-									</tr>
-                                </tbody>
-                                
-                            </table>
+                            <div id="tabela-container">
+                                <table id="tabelaProdutosVenda" class="table table-bordered">
+                                    <thead>
+                                        <th>CÓDIGO DE BARRAS (VALOR NUMÉRICO)</th>
+                                        <th>NOME PRODUTO</th>
+                                        <th>QUANTIDADE</th>
+                                        <th>LOTE</th>
+                                        <th>VALOR POR UNIDADE</th>
+                                        <th>VALOR TOTAL POR PRODUTO</th>
+                                        <th>AÇÕES</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr data-id="0">
+                                            <td>teste</td>
+                                            <td>teste</td>
+                                            <td>teste</td>
+                                            <td>teste</td>
+                                            <td>teste</td> 
+                                            <td>teste</td>
+                                            <td>
+                                                <div id="vendas-add-remove-container">
+                                                    <button id="btnAdicionar" class="btn-solid theme-primary">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                                                            <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325"/>
+                                                        </svg>
+                                                    </button>
+                                                    <button id="btnRemover" class="btn-solid theme-danger">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                                            <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
+                                                            <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                       <tr data-id="0">
+                                            <td>teste</td>
+                                            <td>teste</td>
+                                            <td>teste</td>
+                                            <td>teste</td>
+                                            <td>teste</td> 
+                                            <td>teste</td>
+                                            <td>
+                                                <div id="vendas-add-remove-container">
+                                                    <button id="btnAdicionar" class="btn-solid theme-primary">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                                                            <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325"/>
+                                                        </svg>
+                                                    </button>
+                                                    <button id="btnRemover" class="btn-solid theme-danger">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                                            <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
+                                                            <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr data-id="0">
+                                            <td>teste</td>
+                                            <td>teste</td>
+                                            <td>teste</td>
+                                            <td>teste</td>
+                                            <td>teste</td> 
+                                            <td>teste</td>
+                                            <td>
+                                                <div id="vendas-add-remove-container">
+                                                    <button id="btnAdicionar" class="btn-solid theme-primary">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                                                            <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325"/>
+                                                        </svg>
+                                                    </button>
+                                                    <button id="btnRemover" class="btn-solid theme-danger">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                                            <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
+                                                            <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr data-id="0">
+                                            <td>teste</td>
+                                            <td>teste</td>
+                                            <td>teste</td>
+                                            <td>teste</td>
+                                            <td>teste</td> 
+                                            <td>teste</td>
+                                            <td>
+                                                <div id="vendas-add-remove-container">
+                                                    <button id="btnAdicionar" class="btn-solid theme-primary">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                                                            <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325"/>
+                                                        </svg>
+                                                    </button>
+                                                    <button id="btnRemover" class="btn-solid theme-danger">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                                            <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
+                                                            <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div>
+                                <p><strong>TOTAL: R$ 00,00</strong> </p>
+                            </div>
                         </div>
                         
                     </div> <!-- TABELA -->
-                    <div id="vendas-combobox-input">
-                        <select class="btn-outline theme-secondary" name="formaPagamento" id="formaPagamento">
-                            <option value="">FORMA DE PAGAMENTO</option>
-                            <option value="dinheiro">DINHEIRO EM ESPÉCIE</option>
-                            <option value="credito">CRÉDITO</option>
-                            <option value="debito">DÉBITO</option>
-                        </select>
-                        <input id="campo_cpf" type="text" placeholder="CPF DO CLIENTE...">
-                    </div> <!-- FORMA DE PAGAMENTO E CPF -->
-                    <div>
-                        <input id="checkBoxVendas" type="checkbox" name="checkBoxVendas">
-                        <label for="checkBoxVendas">Cliente cadastrado no sistema?</label>
-                    </div> <!-- CHECKBOX -->
-                    <div id="vendas-final-btn">
-                        <button id="btnCancelar" class="btn-outline theme-secondary">CANCELAR</button>
-                        <button id="btnConfirmar" class="btn-solid theme-primary">CONFIRMAR</button>
+                    <div id="vendas-form-container">
+                        <form id="vendas-form" action="" method="post">
+                            <div id="vendas-combobox-input">
+                                <select class="btn-outline theme-secondary" name="formaPagamento" id="formaPagamento">
+                                    <option value="">FORMA DE PAGAMENTO</option>
+                                    <option value="dinheiro">DINHEIRO EM ESPÉCIE</option>
+                                    <option value="credito">CRÉDITO</option>
+                                    <option value="debito">DÉBITO</option>
+                                </select>
+                                <input name="cpf" id="campo_cpf" type="text" placeholder="CPF DO CLIENTE...">
+                            </div> <!-- FORMA DE PAGAMENTO E CPF -->
+                            <div>
+                                <input id="checkBoxVendas" type="checkbox" name="checkBoxVendas">
+                                <label for="checkBoxVendas">Cliente cadastrado no sistema?</label>
+                            </div> <!-- CHECKBOX -->
+                            <div id="vendas-final-btn">
+                                <input id="btnCancelar" class="btn-outline theme-secondary" type="reset" value="LIMPAR TUDO">
+                                <input id="btnCancelar" class="btn-outline theme-secondary" type="reset" value="LIMPAR CAMPOS">
+                                <input id="btnConfirmar" class="btn-solid theme-primary" type="submit" value="CONFIRMAR">
+                            </div> <!-- BOTÕES -->
+                        </form>
                         
-                    </div> <!-- BOTÕES -->
+                    </div> 
                 </div>
                 <div id="right-side-vendas-container">
                     <div id="vendas-add-remove-container">
-                        <button id="btnAdicionar" class="btn-solid theme-primary">ADICIONAR</button>
-                        <button id="btnRemover" class="btn-solid theme-danger">REMOVER</button>
+                        <button id="btnAdicionar" class="btn-solid theme-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+                            </svg>
+                        </button>
                     </div>
                 </div>
                 
