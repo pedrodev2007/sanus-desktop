@@ -1,17 +1,17 @@
 class TabelaView {
-	async adicionar(tbodyId, rows) {
+	async adicionar(tabelaId, rows) {
 		if (await desenharErros()) {
 			if (rows.length > 1) {
 				for (let i = 0; i < rows.length; i++) {
-					await desenhar(tbodyId, row);
+					await desenhar(tabelaId, row);
 				}
 			} else {
-				await desenhar(tbodyId, row);
+				await desenhar(tabelaId, row);
 			}
 		}	
     }
     
-	async apagar(tabelaId=String, rowId, rows) {
+	async apagar(tabelaId, rowId, rows) {
 		if (rows.length > 1) {
 			for (let i = 0; i < rows.length; i++) {
 				const ROW = document.queySelector(`${tabelaId} tbody tr[data-id="${rowId}"]`);
@@ -24,7 +24,8 @@ class TabelaView {
 	}
 	
 	
-	async desenharErros(TBODY, row=[{}]) {
+	async desenharErros(tabelaId, row=[{}]) {
+		const TBODY = document.querySelector(`${tabelaId} tbody`);
 		if (row.length < 1) {
 			TBODY.innerHTML = `
 			<tr>
