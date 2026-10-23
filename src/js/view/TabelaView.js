@@ -1,14 +1,8 @@
 class TabelaView {
 	async adicionar(tabelaId, rows) {
-		if (await desenharErros()) {
-			if (rows.length > 1) {
-				for (let i = 0; i < rows.length; i++) {
-					await desenhar(tabelaId, row);
-				}
-			} else {
-				await desenhar(tabelaId, row);
-			}
-		}	
+		if (await this.desenharErros() === true) {
+			await this.desenhar(tabelaId, rows);
+		}
     }
     
 	async apagar(tabelaId, rowId, rows) {
@@ -23,44 +17,43 @@ class TabelaView {
 		}
 	}
 	
-	
-	async desenharErros(tabelaId, row=[{}]) {
+	async desenharErros(tabelaId, rows) {
 		const TBODY = document.querySelector(`${tabelaId} tbody`);
-		if (row.length < 1) {
-			TBODY.innerHTML = `
-			<tr>
-				<td>---</td>
-				<td>---</td>
-				<td>---</td>
-				<td>---</td>
-				<td>---</td>
-				<td>---</td>
-				<td>---</td>
-			</tr>
-			`; // resposta vazia
-			return false;
+		if (Array.isArray(rows)) {
+	
+			TBODY.innerHTML = rows.map(r => 
+				{
+					if ('error' in r) {
+						return `
+							<tr>
+								<td>ERRO NA REQUISIÇÃO</td>
+							</tr>
+							`
+					}
+					return true;
+				}
+			).join('');
+		} else {
+			if ('error' in rows) {
+				TBODY.innerHTML = `
+					<tr>
+						<td>ERRO NA REQUISIÇÃO</td>
+					</tr>
+					`; // erro na requisição
+			}
 		}
-		if ('error' in row[0]) {
-			TBODY.innerHTML = `
-			<tr>
-				<td>ERRO NA REQUISIÇÃO</td>
-			</tr>
-			`; // erro na requisição
-			return false;
-		}
+		
 		return true;
 	}
 	
-	async desenhar(tabelaId, row) {
+	async desenhar(tabelaId, rows) {
 		const TBODY = document.querySelector(`${tabelaId} tbody`);
-		TBODY.innerHTML = `
+		TBODY.innerHTML = rows.map(r => `
 		<tr>
-			<td>${row[0].codigo_barra}</td>
-			<td>${row[0].nome}</td>
-			<td>definir</td>
-			<td>falta o lote</td>
-			<td>${row[0].preco}</td>
-			<td>preco multiplicado por uma var de quantidade</td>
+			<td>${rows.codigo_barra}</td>
+			<td>${rows.nome}</td>
+			<td>${rows.lote}</td>
+			<td>${rows.preco}</td>
 			<td>
 				<div id="vendas-add-remove-container">
 						<button id="btnAdicionar" class="btn-solid theme-primary">
@@ -77,6 +70,6 @@ class TabelaView {
 				</div>
 			</td>
 		</tr>
-		`;
+		`).join('');
 	};
 }
