@@ -1,0 +1,45 @@
+/*Guarda variáveis globais*/
+:root {
+    --branco: white;
+    --azulFundoMenuOpcao: rgb(102, 181, 255);
+    --azulFundoOpcao: #92C9FC;
+    --corFundoBotaoOpcao: rgb(229, 229, 229);
+    --corLetraBotaoOpcao: white;
+    
+    /*Menu Ações */
+    --cinza: #121214;
+    --pretoFundoMenuOpcaoEscuro: #1A1A1E;
+    --corFundoBotaoOpcaoEscuro: #222225;
+    --corBorderForm: lightgray;
+    --corBorderFormEscuro: #222225;
+
+}
+
+html,
+body {
+    transition: background-color 0.2s ease, color 0.4s ease, border-color 0.2s ease;
+    margin: 0; 
+    padding: 0;
+    width: 100%;
+    min-height: 100vh; /* Faz ocupar toda a página verticalmente */
+    font-family: Arial, sans-serif;
+}
+
+.fundo-escuro html,
+.fundo-escuro body {
+    transition: background-color 0.2s ease, color 0.4s ease, border-color 0.2s ease;
+    margin: 0; 
+    padding: 0;
+    width: 100%;
+    min-height: 100vh; /* Faz ocupar toda a página verticalmente */
+    font-family: Arial, sans-serif;
+    background-color: var(--cinza);
+}
+
+.negrito {
+    font-weight: bold;
+}
+
+
+
+
