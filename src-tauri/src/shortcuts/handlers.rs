@@ -7,10 +7,6 @@ pub fn go_to_window(app: &AppHandle, window: String) {
 	app.emit_to("main", "going_to", path);
 	}
 
-pub fn add_item(app: &AppHandle) {
-	println!("item adicionado");
-	}
-
-pub fn escape(app: &AppHandle) {
-	println!("voltar (escape)");
+pub fn escape(app: &AppHandle) {	
+	app.emit_to("main", "escape");
 	}
