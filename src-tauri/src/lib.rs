@@ -1,4 +1,4 @@
-mod shortcuts
+mod shortcuts;
 
 pub fn run() {
     tauri::Builder::default()
