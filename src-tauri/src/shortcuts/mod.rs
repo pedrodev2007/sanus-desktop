@@ -5,7 +5,7 @@ pub mod handlers;
 
 pub fn init_shortcuts(app: &AppHandle) -> Result<(), Box<dyn std::error::Error>> {
 	let f3_shortcut = Shortcut::new(None, Code::F3); // vai para o estoque, com foco na barra de busca
-	let esc_shortcut = Shortcut::new(None, Code::Escape); // fecha modais ou sai do foco de campos de busca, checkbox, combobox ou alguma outra coisa do tipo
+	let esc_shortcut = Shortcut::new(None, Code::Escape); // fecha modais
 	
 	//registrando shortcuts
 	app.global_shortcut().register(f3_shortcut)?;
