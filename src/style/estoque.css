@@ -16,11 +16,11 @@ main {
 }
 
 #right-side-main {
-    height: 700px;
+    height: 600px;
+    max-height: 80vh;
     padding: 50px;
     display: flex;
     flex-direction: column;
-    border: 1px solid #d8d8d8;
     border-radius: 50px;
 }
 
@@ -58,10 +58,29 @@ button {
     overflow-y: auto;
 }
 
-#tabela-container {
+.tabelaEstoque-escuro td{
+    background-color: var(--cinza);
+    color: var(--branco);
+}
+
+
+.tabelaEstoque-escuro th{
+    background-color: black;
+    color: var(--branco);
+}
+
+#tabelaEstoque th{
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.tabela-container {
+    max-height: 350px;
     overflow-y: auto;
-    height: 600px;
-    margin-bottom: 25px;
+    width: 100%;
+    box-sizing: border-box;
+
 }
 
 #inputCodigoBarras {
