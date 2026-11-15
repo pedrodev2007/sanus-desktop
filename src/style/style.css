@@ -250,7 +250,8 @@ th {
   top: 0;
 }
 
-th:not(:last-child), td:not(:last-child) {
+th:not(:last-child),
+td:not(:last-child) {
   border-right: 1px solid #e2e8f0;
 }
 
@@ -309,7 +310,10 @@ tr.selected {
 /* MODAL */
 .modal-overlay {
   position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: rgba(0, 0, 0, 0.4);
   display: flex;
   align-items: center;

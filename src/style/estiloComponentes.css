@@ -83,3 +83,13 @@
     background-color: var(--cinza);
     color: white;
 }
+
+.tituloHistorico {
+    display: flex;
+    margin-bottom: 50rem;
+}
+
+.header-historico{
+    display: flex;
+    margin-bottom: 5rem;
+}
