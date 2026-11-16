@@ -5,10 +5,10 @@ const telaHistoricoVenda = `
 
     <main>
       <section>
-        <div class="filter-box">
+        <div class="filter-box" id="buscaHistorico">
           <span class="filter-title">FILTRAGEM</span>
           <div class="filter-inputs">
-            <label class="checkbox-label">
+            <label class="checkbox-label" id="caixaOpcao">
               <input type="checkbox" id="filter-registered">
               <span>Cliente cadastrado no sistema?</span>
             </label>
@@ -21,9 +21,9 @@ const telaHistoricoVenda = `
           <table>
             <thead>
               <tr>
-                <th style="width: 33.3%;">VALOR</th>
-                <th style="width: 33.3%;">NÚMERO DO CPF</th>
-                <th style="width: 33.3%;">RELATÓRIO</th>
+                <th style="width: 33.3%;" class="" id="valorTabela">VALOR</th>
+                <th style="width: 33.3%;" class="" id="cpfTabela">NÚMERO DO CPF</th>
+                <th style="width: 33.3%;" class="" id="relatorioTabela">RELATÓRIO</th>
               </tr>
             </thead>
             <tbody id="historico-table-body">

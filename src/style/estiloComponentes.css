@@ -84,12 +84,7 @@
     color: white;
 }
 
-.tituloHistorico {
+.header-historico {
     display: flex;
-    margin-bottom: 50rem;
-}
-
-.header-historico{
-    display: flex;
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
 }
