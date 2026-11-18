@@ -4,7 +4,7 @@ pub fn run() {
     tauri::Builder::default()
         .plugin(tauri_plugin_global_shortcut::Builder::new().build())
         .setup(|app| {
-			#[cfg(desktop)]
+	    #[cfg(desktop)]
             shortcuts::init_shortcuts(app.handle())?;
 
             Ok(())
