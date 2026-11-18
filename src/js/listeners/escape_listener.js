@@ -1,8 +1,8 @@
-import { getCurrentWebviewWindow } from '@tauri-apps/api/webviewWindow';
+const { getCurrentWindow } = window.__TAURI__.window;
 const MODAIS = document.querySelectorAll('dialog');
 
-const appWebview = getCurrentWebviewWindow();
-appWebview.listen('escape', (e) => {
+const appWindow = getCurrentWindow();
+appWindow.listen('escape', (e) => {
 	for (const M of MODAIS) {
 		if (M.open) {
 			M.close();
