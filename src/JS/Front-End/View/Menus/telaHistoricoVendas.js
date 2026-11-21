@@ -46,11 +46,16 @@ function renderizarHistoricoVenda() {
         const botaoHistoricoVenda = event.target.closest("#fundoHistorico");
 
         if (botaoHistoricoVenda) {
-            console.log("oi")
-            event.preventDefault()
+
+          event.preventDefault()
             renderizarElementos(telaHistoricoVenda)
-        }
+           
+            if(typeof window.buscarHistorico === "function") {
+              window.buscarHistorico();
+            }
+        };
+
     });
-}
+  };
 
 renderizarHistoricoVenda();
