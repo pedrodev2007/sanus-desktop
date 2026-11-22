@@ -83,3 +83,8 @@
     background-color: var(--cinza);
     color: white;
 }
+
+.header-historico {
+    display: flex;
+    margin-bottom: 2rem;
+}

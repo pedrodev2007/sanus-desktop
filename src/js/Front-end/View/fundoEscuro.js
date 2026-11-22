@@ -17,24 +17,23 @@ const botaoAreaControle = document.getElementById("fundoAreaControle");
 const botaoSair = document.getElementById("fundoSair");
 
 
-function trocaCor() {
+function trocaCor(){
+    
 
+    document.addEventListener("click", (event)=> {
 
-    document.addEventListener("click", (event) => {
-
-        const botao = event.target.closest("#botaoFundoCor");
+    const botao = event.target.closest("#botaoFundoCor");
 
         if (botao) {
-
-
+    
             html.classList.toggle("fundo-escuro")
-
+    
             paginaPrincipal.classList.toggle("pagina-principal-escuro")
-
+    
             menuOpcoes.classList.toggle("coluna-lateral-escuro")
-
+    
             menuAcoes.classList.toggle("coluna-principal-escuro")
-
+    
             botaoRealizarVenda.classList.toggle("quadrado-opcaoEscuro");
             botaoClientes.classList.toggle("quadrado-opcaoEscuro");
             botaoEstoque.classList.toggle("quadrado-opcaoEscuro");
@@ -42,16 +41,9 @@ function trocaCor() {
             botaoConfiguracoes.classList.toggle("quadrado-opcaoEscuro");
             botaoAreaControle.classList.toggle("quadrado-opcaoEscuro");
             botaoSair.classList.toggle("quadrado-opcaoEscuro");
-
+    
         }
     }
-    )
-}
+)}
 
 trocaCor();
-
-
-
-
-
-

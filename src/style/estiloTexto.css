@@ -56,25 +56,25 @@
     margin: 0;
 }
 
-.opcoes-Acoes .letra-grande *{
+.opcoes-Configuracoes .letra-grande *{
     font-size: 1.7rem;
     color: var(--corFundoBotaoOpcao);
 }
 
-.opcoes-Acoes .letra-pequena h4 {
+.opcoes-Configuracoes .letra-pequena h4 {
     font-size: 1.1rem;
     color: var(--corFundoBotaoOpcao);
 }
 
-#tituloAcoes.letra-grande  {
+#tituloConfig.letra-grande  {
     font-size: 2.3rem;
 }
 
-#tituloAcoes  {
+#tituloConfig  {
     font-size: 1.7rem;
 }
 
-#tituloAcoes.letra-pequena {
+#tituloConfig.letra-pequena {
     font-size: 1.4rem;
 }
 

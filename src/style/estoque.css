@@ -1,20 +1,3 @@
-body {
-    margin: 0;
-    padding: 0;
-    height: 100dvh;
-}
-
-main {
-    height: 100%;
-}
-
-#container-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-
 #right-side-main {
     height: 600px;
     max-height: 80vh;
