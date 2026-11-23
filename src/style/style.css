@@ -192,7 +192,7 @@ body {
   cursor: pointer;
 }
 
-input[type="text"] {
+input {
   width: 100%;
   padding: 10px 14px;
   font-size: 13px;
@@ -201,7 +201,7 @@ input[type="text"] {
   outline: none;
 }
 
-input[type="text"]:focus {
+input:focus {
   border-color: #58b2f6;
 }
 
@@ -348,4 +348,29 @@ tr.selected {
   justify-content: flex-end;
   gap: 8px;
   margin-top: 20px;
+}
+
+#modal-cadastrar .checkbox-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 6px;
+  margin-bottom: 8px;
+}
+
+#modal-cadastrar .checkbox-group input[type="checkbox"] {
+  width: 14px;
+  height: 14px;
+  margin: 0;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+#modal-cadastrar .checkbox-group label.form-check-label.sm {
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: none;
+  line-height: 1.2;
+  margin: 0;
+  cursor: pointer;
 }
