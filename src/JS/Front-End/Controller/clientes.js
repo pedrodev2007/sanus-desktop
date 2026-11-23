@@ -79,8 +79,11 @@ async function buscarCliente() {
 
 function salvarCliente() {
   const nome = document.getElementById('new-name').value;
+  const email = document.getElementById('new-email').value;
   const cpf = document.getElementById('new-cpf').value;
+  const data_nascimento = document.getElementById('new-birthday').value;
   const endereco = document.getElementById('new-address').value;
+  const phone = document.getElementById('new-telephone').value;
 
   if (!nome || !cpf) {
     alert('Preencha pelo menos Nome e CPF.');
