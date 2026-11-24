@@ -7,6 +7,10 @@ export async function buscarVendas(){
     return response.json();
 }
 
+export async function criarVenda({id_Cliente, id_Funcionario, nfe, canal_Venda, forma_Pagamento, valor_Pago, valor_Recebido, situacao, itens}) {
+    // programar aqui 
+}
+
 //Fetch para estoque
 export async function buscarEstoque(){
     const response = await fetch(`${API_URL}/api/estoque`);
