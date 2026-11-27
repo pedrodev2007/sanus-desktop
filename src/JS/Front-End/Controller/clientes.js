@@ -79,46 +79,30 @@ async function buscarCliente() {
 
 function salvarCliente() {
   const nome = document.getElementById('new-name').value;
+  const email = document.getElementById('new-email').value;
   const cpf = document.getElementById('new-cpf').value;
+  const dataNascimento = document.getElementById('new-birthday').value;
   const endereco = document.getElementById('new-address').value;
+  const telefone = document.getElementById('new-telephone').value;
+  const senha = document.getElementById('new-password').value;
+  const aceitaOferta = document.getElementById('defaultCheck1').checked;
 
-  if (!nome || !cpf) {
-    alert('Preencha pelo menos Nome e CPF.');
+  if (!nome || !cpf || !email || !dataNascimento || !endereco || !telefone || !senha || !aceitaOferta) {
+    alert('Preencha todos os campos.');
     return;
   }
 
-  clientes.push({ id: Date.now(), nome, cpf, endereco });
+  clientes.push({ id: Date.now(), nome, email, cpf, dataNascimento, endereco, telefone, senha, aceitaOferta });
   listaExibida = clientes;
   renderClientes();
   closeModal('modal-cadastrar');
 
-  document.getElementById('new-name').value = '';
-  document.getElementById('new-cpf').value = '';
-  document.getElementById('new-address').value = '';
-}
-
-function removerCliente() {
-  if (!selectedClientId) {
-    alert('Selecione um cliente na tabela para remover.');
-    return;
-  }
-  clientes = clientes.filter(c => c.id !== selectedClientId);
-  listaExibida = listaExibida.filter(c => c.id !== selectedClientId);
-  selectedClientId = null;
-  renderClientes();
-}
-
-function atualizarCliente() {
-  if (!selectedClientId) {
-    alert('Selecione um cliente na tabela para atualizar.');
-    return;
-  }
-  const cliente = clientes.find(c => c.id === selectedClientId);
-  const novoNome = prompt('Editar Nome:', cliente.nome);
-  if (novoNome) {
-    cliente.nome = novoNome;
-    renderClientes();
-  }
+  nome.value = '';
+  email.value = '';
+  cpf.value = '';
+  dataNascimento.value = '';
+  endereco.value = '';
+  aceitaOferta.checked = false;
 }
 
 function openModal(id) { document.getElementById(id).classList.remove('hidden'); }
