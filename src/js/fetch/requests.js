@@ -11,9 +11,9 @@ export async function buscarVendas(){
 export async function criarVenda({id_Cliente, id_Funcionario, nfe, forma_Pagamento, valor_Pago, valor_Recebido, situacao, itens}) {
     const canal_Venda = 'Presencial';
     const token = sessionStorage.getItem("token");
-    const verificao = verifyToken(token);
+    const verificacao = verifyToken(token);
 
-    if (!verificao) return verificao;
+    if (!verificacao) return verificacao;
 
     const response = await fetch(`${API_URL}/api/vendas`, {
         method: "POST",
