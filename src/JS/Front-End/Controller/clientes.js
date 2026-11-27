@@ -77,32 +77,32 @@ async function buscarCliente() {
 /* ---- As três funções abaixo AINDA NÃO falam com o servidor ----
    Elas só mexem na tela. Ao recarregar, tudo volta ao que está no banco. */
 
-function salvarCliente() {
-  const nome = document.getElementById('new-name').value;
-  const email = document.getElementById('new-email').value;
-  const cpf = document.getElementById('new-cpf').value;
-  const dataNascimento = document.getElementById('new-birthday').value;
-  const endereco = document.getElementById('new-address').value;
-  const telefone = document.getElementById('new-telephone').value;
-  const senha = document.getElementById('new-password').value;
-  const aceitaOferta = document.getElementById('defaultCheck1').checked;
+async function salvarCliente() {
 
-  if (!nome || !cpf || !email || !dataNascimento || !endereco || !telefone || !senha || !aceitaOferta) {
+  const dados = {nome: document.getElementById('new-name').value, 
+    cpf: document.getElementById('new-cpf').value, 
+    email: document.getElementById('new-email').value, 
+    senha: document.getElementById('new-password').value, 
+    data_Nasc: document.getElementById('new-birthday').value, telefone: document.getElementById('new-telephone').value, aceitaOfertas: document.getElementById('defaultCheck1').checked
+  }
+
+  if (!dados.nome || !dados.cpf || !dados.email || !dados.data_Nasc || !dados.telefone || !dados.senha) {
     alert('Preencha todos os campos.');
     return;
   }
 
-  clientes.push({ id: Date.now(), nome, email, cpf, dataNascimento, endereco, telefone, senha, aceitaOferta });
-  listaExibida = clientes;
-  renderClientes();
-  closeModal('modal-cadastrar');
+  console.log(dados.dataNascimento)
 
-  nome.value = '';
-  email.value = '';
-  cpf.value = '';
-  dataNascimento.value = '';
-  endereco.value = '';
-  aceitaOferta.checked = false;
+  try {
+    await requisicaoApi('/usuarios', { method: 'POST', body: dados });
+
+    closeModal('modal-cadastrar');
+
+    await buscarCliente();
+  }
+  catch (erro){
+    alert("Não foi possível cadastrar: " + erro)
+  }
 }
 
 function openModal(id) { document.getElementById(id).classList.remove('hidden'); }

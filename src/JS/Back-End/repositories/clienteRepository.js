@@ -72,14 +72,15 @@ async function listarClientes(){
             u.nome,
             u.email,
             u.cpf,
-            e.logradouro,
-            te.telefone
+            MIN(e.logradouro)  AS endereco,
+            MIN(te.telefone)   AS telefone
         FROM Tbl_Cliente c
-        INNER JOIN Tbl_Usuario u ON u.id = c.id_Usuario 
-        INNER JOIN Tbl_Cliente_Endereco ce ON c.id = ce.id_Cliente  
-        INNER JOIN Tbl_Endereco e ON e.id = ce.id_Endereco 
-        INNER JOIN Tbl_Telefone_Usuario te ON te.id_usuario = u.id
-        ORDER BY u.nome;
+        INNER JOIN Tbl_Usuario u              ON u.id = c.id_Usuario
+        LEFT JOIN  Tbl_Cliente_Endereco ce    ON ce.id_Cliente = c.id
+        LEFT JOIN  Tbl_Endereco e             ON e.id = ce.id_Endereco
+        LEFT JOIN  Tbl_Telefone_Usuario te    ON te.id_usuario = u.id
+        GROUP BY c.id, u.nome, u.email, u.cpf
+        ORDER BY u.nome
     `
     );
     return result
