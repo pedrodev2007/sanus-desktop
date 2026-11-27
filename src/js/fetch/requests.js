@@ -1,14 +1,40 @@
 //Fetch para vendas
 const API_URL = process.env.API_URL;
+import { verifyToken } from "../utils/verifyToken";
 
 export async function buscarVendas(){
     const response = await fetch(`${API_URL}/api/vendas`);
     if(!response.ok) throw new Error("Erro ao buscar vendas");
     return response.json();
 }
+// registra venda. necessidade da nfe ainda é incerta
+export async function criarVenda({id_Cliente, id_Funcionario, nfe, forma_Pagamento, valor_Pago, valor_Recebido, situacao, itens}) {
+    const canal_Venda = 'Presencial';
+    const token = sessionStorage.getItem("token");
+    const verificao = verifyToken(token);
 
-export async function criarVenda({id_Cliente, id_Funcionario, nfe, canal_Venda, forma_Pagamento, valor_Pago, valor_Recebido, situacao, itens}) {
-    // programar aqui 
+    if (!verificao) return verificao;
+
+    const response = await fetch(`${API_URL}/api/vendas`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+            body: JSON.stringify({
+                id_Cliente, 
+                id_Funcionario, 
+                nfe, 
+                canal_Venda, 
+                forma_Pagamento, 
+                valor_Pago, 
+                valor_Recebido, 
+                situacao, 
+                itens
+            }),
+        },
+    });
+    if (!response.ok) throw new Error("Erro ao cadastrar venda");
+    return response.json();
 }
 
 //Fetch para estoque
